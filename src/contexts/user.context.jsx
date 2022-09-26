@@ -5,8 +5,8 @@ import {
 } from '../utils/firebase/firebase.utils';
 
 export const UserContext = createContext({
-  currentUser: null,
-  setCurrentUser: () => null,
+  // currentUser: null,
+  // setCurrentUser: () => null,
 });
 
 export const USER_ACTION_TYPES = {
@@ -23,7 +23,7 @@ const userReducer = (state, action) => {
         currentUser: payload,
       };
     default:
-      throw new Error(`Unhandled type ${type} in userReducer`);
+      throw new Error(`Unhandled type of ${type} in userReducer`);
   }
 };
 
